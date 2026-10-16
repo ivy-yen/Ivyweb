@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#F7F9FC">
+  <meta name="description" content="顏苡筑 Ivy Yen｜AI 訓練師、企業 AI 導入推動者。結合 28 年設計行銷實戰經驗，協助企業 AI 導入、工作流程優化、人才培訓與數據應用。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ivy Yen｜讓 AI 走進工作，讓改變真正發生。">
+  <meta property="og:description" content="AI 訓練師 × 企業 AI 導入 × 人才培訓。讓 AI 與數據，成為每個人的超能力。">
+  <meta property="og:locale" content="zh_TW">
+  <title>Ivy Yen｜AI 訓練師・企業 AI 導入與人才培訓</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* ===== Brand tokens: 修改品牌色、圓角、字體可由這裡開始 ===== */
+    :root{--primary:#6E5BFF;--secondary:#F7F9FC;--soft-gray:#E9EEF5;--electric-blue:#4C8DFF;--accent:#00C2A8;--pink:#FF6FB5;--text:#1F2A37;--highlight:#E9EEF5;--primary-dark:#5140CC;--blue:var(--electric-blue);--violet:var(--primary);--mint:var(--accent);--ink:var(--text);--muted:#526079;--line:var(--soft-gray);--mist:var(--secondary);--brand-gradient:linear-gradient(110deg,#6E5BFF,#4C8DFF,#00C2A8);--font:'Inter','Noto Sans TC',system-ui,-apple-system,sans-serif;--booking:'https://calendar.app.google/yrGdqPfziZRB4BLG9';--radius:24px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{font-family:var(--font);background:#F7F9FC;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    ::selection{background:#E9EEF5;color:#1F2A37}
+    a,button{ -webkit-tap-highlight-color:transparent }
+    a:focus-visible,button:focus-visible{outline:3px solid var(--mint);outline-offset:5px}
+    .container-x{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+    .text-gradient{background:linear-gradient(106deg,#6E5BFF 8%,#6E5BFF 51%,#6E5BFF 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .section-pad{padding-block:112px}
+    .eyebrow{font-size:11px;letter-spacing:.22em;font-weight:800;color:#6E5BFF;text-transform:uppercase}
+    .section-h{font-size:clamp(30px,3.65vw,49px);line-height:1.36;letter-spacing:-.042em;font-weight:800}
+    .section-lead{color:var(--muted);font-size:16px;line-height:1.95;max-width:670px}
+    .glass{background:rgba(247,249,252,.78);border:1px solid rgba(233,238,245,.9);box-shadow:0 14px 48px rgba(31,42,55,.045);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+    .site-nav{position:fixed;inset:0 0 auto;z-index:80;height:82px;background:rgba(247,249,252,.76);border-bottom:1px solid rgba(233,238,245,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:box-shadow .3s,background .3s}
+    .site-nav.scrolled{box-shadow:0 9px 35px rgba(31,42,55,.08);background:rgba(247,249,252,.92)}
+    .nav-link{color:#1F2A37;font-weight:600;font-size:13px;position:relative;padding:12px 0;transition:color .2s}
+    .nav-link:after{content:"";position:absolute;left:0;right:100%;height:2px;bottom:4px;background:linear-gradient(90deg,var(--blue),var(--violet));transition:right .25s}
+    .nav-link:hover{color:var(--blue)}.nav-link:hover:after{right:0}
+    .brand{font-weight:900;letter-spacing:-.075em;font-size:27px}.brand-dot{color:#6E5BFF}
+    .btn{min-height:51px;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:12px 22px;border-radius:14px;font-size:14px;font-weight:750;position:relative;transition:transform .3s,box-shadow .3s,border-color .3s;color:var(--ink);text-align:center;white-space:nowrap}
+    .btn:hover{transform:translateY(-3px)}.btn svg{width:17px;height:17px;transition:transform .3s}.btn:hover svg{transform:translate(3px,-3px)}
+    .btn-primary{border:1px solid #E9EEF5;background:linear-gradient(#F7F9FC,#F7F9FC) padding-box,linear-gradient(110deg,#6E5BFF,#6E5BFF) border-box;border:1.5px solid transparent;box-shadow:0 8px 24px rgba(110,91,255,.12),inset 0 0 15px rgba(247,249,252,.6)}
+    .btn-primary:hover{box-shadow:0 0 0 5px rgba(31,42,55,.08),0 14px 38px rgba(110,91,255,.17);border-color:var(--mint)}
+    .btn-solid{background:linear-gradient(100deg,#6E5BFF,#6E5BFF);color:#F7F9FC;box-shadow:0 12px 28px rgba(110,91,255,.2)}.btn-solid:hover{box-shadow:0 16px 36px rgba(110,91,255,.28)}
+    .btn-soft{border:1px solid #E9EEF5;background:rgba(247,249,252,.55)}.btn-soft:hover{border-color:#E9EEF5}
+    .btn-status{position:absolute;white-space:nowrap;top:calc(100% + 9px);left:50%;transform:translate(-50%,-4px);color:#1F2A37;font-size:10px;font-weight:700;letter-spacing:.04em;opacity:0;pointer-events:none;transition:.25s}.btn:hover .btn-status,.btn:focus-visible .btn-status{opacity:1;transform:translate(-50%,0)}
+    .hero{position:relative;min-height:805px;display:flex;align-items:center;padding:156px 0 92px;overflow:hidden;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#E9EEF588 1px,transparent 1px),linear-gradient(90deg,#E9EEF588 1px,transparent 1px);background-size:66px 66px;mask-image:linear-gradient(to bottom,transparent 4%,black 42%,transparent 93%);opacity:.38;z-index:-3}
+    .hero::after{content:"";position:absolute;right:-13%;top:6%;width:58vw;height:58vw;max-width:860px;max-height:860px;background:radial-gradient(circle,rgba(110,91,255,.17),rgba(233,238,245,.11) 36%,transparent 68%);z-index:-2;animation:breath 12s ease-in-out infinite alternate}
+    #particleCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.7}
+    .ambient{position:absolute;border-radius:50%;filter:blur(46px);pointer-events:none;z-index:-2;animation:drift 14s ease-in-out infinite alternate}.ambient-one{width:260px;height:260px;left:-130px;top:150px;background:#E9EEF577}.ambient-two{width:280px;height:280px;right:24%;bottom:0;background:#E9EEF577;animation-delay:-5s}
+    .hero-label{display:inline-flex;align-items:center;gap:10px;border:1px solid #E9EEF5;border-radius:100px;background:#F7F9FCc9;padding:10px 15px;color:#1F2A37;font-size:10px;letter-spacing:.13em;font-weight:800;box-shadow:0 7px 25px #6E5BFF0b}
+    .live-dot{width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 0 4px #1F2A3718;animation:pulse 2.6s infinite}
+    .hero-title{font-size:clamp(39px,4.9vw,70px);line-height:1.37;font-weight:900;letter-spacing:-.065em;margin:25px 0 21px}
+    .type-line{position:relative;display:block;min-height:1.37em;white-space:nowrap}.typing-cursor:after{content:"";display:inline-block;height:.9em;width:3px;background:#6E5BFF;vertical-align:-.09em;margin-left:4px;animation:blink .9s steps(1) infinite}.type-done:after{display:none}
+    .hero-copy{max-width:555px;color:#1F2A37;font-size:16px;line-height:2.05}.hero-quote{margin-top:22px;font-size:15px;font-weight:750;color:#1F2A37}
+    .hero-stat{display:flex;gap:34px;margin-top:47px;padding-top:25px;border-top:1px solid #E9EEF5;max-width:540px}.hero-stat strong{font-weight:850;font-size:24px;letter-spacing:-.06em}.hero-stat span{font-size:11px;display:block;color:#1F2A37;margin-top:4px}
+    .orb-wrap{position:relative;width:min(100%,540px);aspect-ratio:1;margin:auto;filter:drop-shadow(0 20px 55px #6E5BFF21)}
+    .orb-wrap::before{content:"";position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle at 45% 44%,#F7F9FC 3%,#E9EEF577 39%,#E9EEF533 58%,transparent 70%);filter:blur(20px)}
+    .orb{position:absolute;inset:14%;border-radius:50%;border:1px solid #6E5BFF33;transform-style:preserve-3d;animation:spin 28s linear infinite}
+    .orb-1{background:conic-gradient(from 20deg,transparent 10%,#6E5BFF40 25%,transparent 40%,#6E5BFF44 60%,transparent 82%);box-shadow:inset 0 0 65px #E9EEF533,0 0 55px #E9EEF522}
+    .orb-2{inset:24% 3%;border:2px solid #6E5BFF6b;transform:rotate(-34deg);animation:orbitA 23s linear infinite}.orb-3{inset:3% 24%;border:1px solid #6E5BFF99;transform:rotate(32deg);animation:orbitB 25s linear infinite}.orb-4{inset:8%;border:1px dashed #6E5BFF77;animation:spin 60s linear infinite reverse}
+    .orb-core{position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle at 38% 35%,#F7F9FC,#E9EEF5 25%,#6E5BFF 52%,#6E5BFF 77%,#E9EEF5 97%);box-shadow:inset -15px -18px 36px #6E5BFF55,inset 10px 12px 32px #F7F9FCb7,0 0 58px #6E5BFF6e;animation:float 7s ease-in-out infinite}
+    .orb-core::before{content:"";position:absolute;inset:17%;border-radius:50%;border:1px solid #F7F9FC99;box-shadow:0 0 20px #F7F9FC88}.orb-core::after{content:"AI";font-family:Inter,sans-serif;position:absolute;inset:0;display:grid;place-items:center;font-weight:900;color:#F7F9FC;font-size:clamp(48px,6vw,87px);text-shadow:0 3px 28px #6E5BFF66;letter-spacing:-.09em}
+    .orbit-dot{position:absolute;width:10px;height:10px;border:2px solid #F7F9FC;border-radius:50%;background:#6E5BFF;box-shadow:0 0 18px #6E5BFF;z-index:2}.dot-a{top:10%;left:32%}.dot-b{bottom:18%;right:8%;background:#6E5BFF}.dot-c{bottom:16%;left:16%;width:7px;height:7px;background:#1F2A37}
+    .orbit-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:13px;background:#F7F9FCcb;border:1px solid #E9EEF5;box-shadow:0 12px 32px #6E5BFF18;backdrop-filter:blur(14px);font-size:11px;color:#1F2A37;font-weight:700;animation:float 7s ease-in-out infinite}.orbit-chip i{display:block;width:8px;height:8px;background:#1F2A37;border-radius:50%}.chip-one{top:16%;right:-3%}.chip-two{bottom:15%;left:-6%;animation-delay:-3s}.chip-two i{background:#6E5BFF}
+    .mini-line{width:34px;height:15px;display:block;background:linear-gradient(145deg,transparent 44%,#6E5BFF 47%,#6E5BFF 52%,transparent 55%)}
+    .section-alt{background:linear-gradient(180deg,#F7F9FC,#F7F9FC)}
+    .photo-place{min-height:485px;border-radius:28px;background:radial-gradient(circle at 51% 45%,#F7F9FC 1%,#E9EEF5 37%,#F7F9FC 77%,#F7F9FC 100%);position:relative;overflow:hidden;border:1px solid #E9EEF5;display:flex;align-items:center;justify-content:center}
+    .photo-place::before{content:"";position:absolute;width:340px;height:340px;border:1px solid #6E5BFF70;border-radius:50%;box-shadow:0 0 0 40px #6E5BFF0f,0 0 0 80px #6E5BFF10}
+    .photo-place::after{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,#F7F9FC00 49.6%,#F7F9FC78 50%,#F7F9FC00 50.4%),linear-gradient(#F7F9FC00 49.6%,#F7F9FC78 50%,#F7F9FC00 50.4%);background-size:46px 46px;opacity:.45}
+    .profile-icon{z-index:1;width:112px;height:112px;border:1px solid #F7F9FCd9;border-radius:50%;display:grid;place-items:center;background:#F7F9FC70;box-shadow:0 14px 45px #6E5BFF21;color:#6E5BFF}
+    .profile-icon svg{width:62px;height:62px;stroke-width:1.1}.profile-label{position:absolute;z-index:2;bottom:23px;left:23px;right:23px;border-radius:15px;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#F7F9FCd4;border:1px solid #F7F9FC;font-size:12px;color:#1F2A37}.profile-label strong{color:#1F2A37;font-size:14px}
+    .metric{padding:21px 0;border-top:1px solid #E9EEF5}.metric strong{font-size:21px;letter-spacing:-.045em;color:#1F2A37;font-weight:850}.metric span{font-size:12px;color:#1F2A37}
+    .card-hover{transition:transform .32s,box-shadow .32s,border-color .32s;will-change:transform}.card-hover:hover{transform:translateY(-7px);box-shadow:0 22px 58px #6E5BFF1c;border-color:#E9EEF5}
+    .feature-card{border-radius:24px;padding:34px 30px;min-height:276px}.card-number{font-size:11px;color:#6E5BFF;font-weight:800;letter-spacing:.17em}.icon-square{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,#E9EEF5,#F7F9FC);color:#6E5BFF;border:1px solid #E9EEF5}.icon-square svg{width:23px;height:23px;stroke-width:1.65}
+    /* ===== AI in Action：AI 實戰應用與專業探索 ===== */
+    .aia-section{position:relative;overflow:hidden}
+    .aia-section::before{content:"";position:absolute;width:680px;height:680px;left:50%;top:48%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(110,91,255,.08),rgba(110,91,255,.05) 42%,rgba(31,42,55,.03) 58%,transparent 72%);pointer-events:none}
+    .aia-flow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
+    .aia-flow path{fill:none;stroke-width:1.2;stroke-linecap:round}
+    .aia-flow .flow-base{stroke:#E9EEF5}
+    .aia-flow .flow-run{stroke:url(#aiaFlowGrad);stroke-dasharray:70 520;animation:flowRun 9s linear infinite}
+    .aia-flow .flow-run.delay{animation-delay:-4.5s;animation-duration:11s}
+    .aia-card{position:relative;display:flex;flex-direction:column;border-radius:24px;padding:34px 30px 30px;background:rgba(247,249,252,.74);border:1px solid rgba(233,238,245,.95);box-shadow:0 14px 44px rgba(31,42,55,.05);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden}
+    .aia-card::before{content:"";position:absolute;width:240px;height:240px;top:-125px;right:-95px;border-radius:50%;background:radial-gradient(circle,rgba(110,91,255,.15),rgba(110,91,255,.1) 45%,transparent 70%);pointer-events:none;opacity:.7;transition:opacity .32s}
+    .aia-card::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.2px;background:linear-gradient(135deg,#6E5BFF,#6E5BFF 55%,#00C2A8);-webkit-mask:linear-gradient(#000000 0 0) content-box,linear-gradient(#000000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000000 0 0) content-box,linear-gradient(#000000 0 0);mask-composite:exclude;opacity:0;transition:opacity .32s;pointer-events:none}
+    .aia-card:hover::before,.aia-card:hover::after,.aia-card:focus-within::after{opacity:1}
+    .aia-card.card-hover:hover{border-color:transparent;box-shadow:0 22px 58px rgba(110,91,255,.13),0 0 0 6px rgba(110,91,255,.04)}
+    .aia-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#E9EEF5,#F7F9FC);color:#6E5BFF;border:1px solid #E9EEF5;font-size:21px;transition:box-shadow .32s,color .32s}
+    .aia-card:hover .aia-icon{color:#6E5BFF;box-shadow:0 0 0 6px rgba(110,91,255,.07),0 0 26px rgba(110,91,255,.28)}
+    .aia-card h3{font-size:19px;font-weight:800;line-height:1.5;margin:28px 0 12px}
+    .aia-card p{font-size:13px;line-height:1.95;color:var(--muted);flex:1}
+    .aia-card .btn{margin-top:26px;min-height:46px;font-size:13px;align-self:flex-start}
+    .aia-card .btn i{font-size:11px;color:var(--mint);transition:transform .3s}.aia-card .btn:hover i{transform:translateY(2px)}
+    .aia-slogan{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:56px;text-align:center;font-size:17px;font-weight:800;color:#1F2A37;line-height:1.7}
+    .aia-slogan::before,.aia-slogan::after{content:"";flex:0 0 42px;height:1px;background:linear-gradient(90deg,transparent,#6E5BFF)}.aia-slogan::after{transform:scaleX(-1)}
+    @keyframes flowRun{from{stroke-dashoffset:590}to{stroke-dashoffset:0}}
+    @media(max-width:640px){.aia-slogan{font-size:15px;gap:10px}.aia-slogan::before,.aia-slogan::after{flex-basis:22px}.aia-flow{opacity:.45}}
+    .problem-item{border:1px solid #E9EEF5;background:#F7F9FCcf;border-radius:18px;padding:22px 23px;display:grid;grid-template-columns:26px 1fr;gap:15px;transition:.25s}.problem-item:hover{border-color:#E9EEF5;box-shadow:0 12px 32px #1F2A370e;transform:translateX(4px)}.problem-item .problem-check{width:25px;height:25px;border-radius:8px;background:#F7F9FC;color:#6E5BFF;display:grid;place-items:center;font-weight:900;font-size:15px}.problem-item h3{font-size:16px;font-weight:800;margin-bottom:5px}.problem-item p{font-size:13px;line-height:1.8;color:#1F2A37}.problem-item .solution{font-size:12px;color:#1F2A37;margin-top:10px;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .3s}.problem-item:hover .solution,.problem-item:focus-within .solution{max-height:50px;opacity:1}
+    .service-card{padding:27px;border-radius:21px;min-height:255px;position:relative;overflow:hidden}.service-card::before{content:"";position:absolute;inset:auto -70px -100px auto;width:185px;height:185px;border-radius:50%;background:radial-gradient(circle,#E9EEF565,transparent 70%);pointer-events:none}.service-card .card-arrow{position:absolute;top:31px;right:28px;color:#6E5BFF;transition:.3s}.service-card:hover .card-arrow{color:#6E5BFF;transform:translate(3px,-3px)}.service-card h3{font-size:18px;font-weight:800;margin:24px 0 10px;letter-spacing:-.02em}.service-card p{color:#1F2A37;line-height:1.85;font-size:13px;max-width:295px}
+    .process-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.process-grid::before{content:"";position:absolute;top:32px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,#6E5BFF,#6E5BFF,#6E5BFF);z-index:0}.process-grid::after{content:"";position:absolute;top:29px;left:12%;width:7px;height:7px;border-radius:50%;background:#6E5BFF;box-shadow:0 0 15px #6E5BFF;animation:runpoint 7s linear infinite}.process-step{position:relative;z-index:1}.step-dot{width:65px;height:65px;background:#F7F9FC;border:1px solid #E9EEF5;border-radius:21px;display:grid;place-items:center;box-shadow:0 8px 24px #6E5BFF16;margin-bottom:28px;color:#6E5BFF;font-size:20px;font-weight:850}.process-step h3{font-size:17px;font-weight:800;margin-bottom:5px}.process-step small{font-size:11px;letter-spacing:.13em;color:#6E5BFF;font-weight:800}.process-step p{font-size:13px;color:#1F2A37;line-height:1.9;margin-top:13px;max-width:222px}
+    .cta-band{position:relative;text-align:center;overflow:hidden;border-radius:32px;padding:95px 24px;background:radial-gradient(ellipse at 50% -15%,#E9EEF5 0%,#F7F9FC 62%);border:1px solid #E9EEF5;box-shadow:0 25px 75px #6E5BFF13}.cta-band::before,.cta-band::after{content:"";position:absolute;top:50%;left:50%;width:650px;height:650px;border-radius:50%;border:1px solid #E9EEF5;transform:translate(-50%,-50%);pointer-events:none;animation:spin 50s linear infinite}.cta-band::after{width:430px;height:430px;border-style:dashed;border-color:#E9EEF5;animation-direction:reverse}.cta-content{position:relative;z-index:2}
+    .footer{border-top:1px solid #E9EEF5;padding:49px 0 28px;background:#F7F9FC}.footer-note{color:#1F2A37;font-size:12px;line-height:1.8}.social-text{color:#1F2A37;font-size:10px;letter-spacing:.12em;font-weight:700}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1)}.reveal.visible{opacity:1;transform:none}
+    .mobile-menu{position:absolute;left:16px;right:16px;top:73px;border-radius:19px;padding:12px;background:#F7F9FCfa;border:1px solid #E9EEF5;box-shadow:0 15px 40px #1F2A3720;display:none}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:13px 16px;border-radius:10px;font-weight:650;font-size:14px;color:#1F2A37}.mobile-menu a:hover{background:#F7F9FC}
+    @keyframes blink{50%{opacity:0}}@keyframes pulse{50%{box-shadow:0 0 0 8px #1F2A3708}}@keyframes float{50%{transform:translateY(-13px)}}@keyframes breath{50%{transform:scale(1.12)}}@keyframes drift{100%{transform:translate(45px,-30px)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes orbitA{to{transform:rotate(326deg)}}@keyframes orbitB{to{transform:rotate(392deg)}}@keyframes runpoint{to{left:88%}}
+    @media(max-width:1100px){.desktop-menu{gap:19px!important}.nav-link{font-size:12px}.hero-title{font-size:clamp(37px,4.8vw,59px)}.orb-wrap{width:460px}}
+    @media(max-width:900px){.section-pad{padding-block:84px}.hero{min-height:auto;padding-top:142px;padding-bottom:84px}.hero-grid{grid-template-columns:1fr!important;gap:20px!important}.hero-content{max-width:710px}.hero-art{max-width:470px;justify-self:center;opacity:.94}.about-grid{grid-template-columns:1fr!important}.photo-place{min-height:400px}.desktop-menu,.desktop-cta{display:none!important}.mobile-toggle{display:inline-flex!important}.process-grid{gap:14px}.feature-card{padding:26px 22px}}
+    @media(max-width:640px){.container-x{width:min(100% - 36px,1200px)}.site-nav{height:73px}.hero{padding-top:127px;padding-bottom:44px}.hero-label{font-size:8px;padding:9px 12px;letter-spacing:.1em}.hero-title{font-size:clamp(33px,8.7vw,48px);line-height:1.43;margin-top:25px;letter-spacing:-.065em}.hero-copy{font-size:14px;line-height:1.95}.hero-quote{font-size:13px}.hero-buttons{align-items:stretch!important}.hero-buttons .btn{font-size:12px;padding-inline:12px;flex:1}.hero-stat{gap:20px;margin-top:32px}.hero-stat strong{font-size:19px}.hero-stat span{font-size:10px}.hero-art{width:100%;max-width:350px;margin-top:7px}.orb-wrap{width:100%}.chip-one{right:0}.chip-two{left:0}.orbit-chip{font-size:9px;padding:9px 10px}.section-pad{padding-block:68px}.section-h{font-size:30px}.section-lead{font-size:14px}.feature-card{min-height:auto}.photo-place{min-height:370px}.metric strong{font-size:17px}.metric span{font-size:11px}.process-grid{display:grid;grid-template-columns:1fr;gap:30px;padding-left:8px}.process-grid::before{top:25px;bottom:32px;left:34px;right:auto;width:1px;height:auto}.process-grid::after{left:31px;top:30px;animation:none}.process-step{display:grid;grid-template-columns:65px 1fr;gap:20px;align-items:start}.step-dot{margin:0}.process-step p{max-width:none}.cta-band{border-radius:22px;padding:76px 20px}.cta-band::before{width:420px;height:420px}.cta-band::after{width:310px;height:310px}.footer{padding-top:36px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.btn-status{display:none}}
+    .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}.contact-socials{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}.contact-social{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:112px;padding:16px 8px;border:1px solid var(--line);border-radius:18px;background:#F7F9FC;font-size:13px;font-weight:700;transition:transform .25s,border-color .25s,box-shadow .25s}.contact-social i{font-size:30px;color:var(--social-color)}.contact-social:hover{transform:translateY(-5px);border-color:var(--social-color);box-shadow:0 12px 28px #1F2A3715}.requirements-card{padding:36px;border-radius:24px;background:linear-gradient(135deg,#F7F9FC,#F7F9FC);border:1px solid #E9EEF5}.requirements-card h3{font-size:24px;font-weight:800;margin:20px 0 12px}.requirements-card p{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:24px}.requirements-note{display:block;font-size:12px;color:var(--muted);margin-top:14px}@media(max-width:767px){.contact-grid{grid-template-columns:1fr;gap:32px}.requirements-card{padding:28px}.contact-socials{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(prefers-reduced-motion:reduce){.contact-social{transition:none}.contact-social:hover{transform:none}}
+
+    /* 新版品牌策略：60% 霧白／柔霧灰、30% 紫藍、10% 青綠／柔霓粉。
+       小字使用深色衍生色，以維持對比；三色漸層用於視覺裝飾。 */
+    body{background:var(--secondary);color:var(--text)}
+    ::selection{background:#6E5BFF26;color:var(--text)}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--primary-dark);outline-offset:5px}
+    .text-gradient{background:linear-gradient(110deg,#5140CC,#245CB8);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+    .brand-dot,.eyebrow,.hero-quote,.metric strong,.process-step small{color:var(--primary-dark)}
+    .section-alt{background:linear-gradient(180deg,var(--soft-gray),var(--secondary))}
+    .site-nav,.site-nav.scrolled{background:#F7F9FCEB;border-color:var(--soft-gray)}
+    .nav-link,.mobile-menu a{color:var(--text)}
+    .nav-link:hover{color:var(--primary-dark)}
+    .nav-link:after{background:var(--brand-gradient)}
+    .glass,.aia-card,.problem-item,.contact-social{background:#FFFFFFD9;border-color:var(--soft-gray);box-shadow:0 14px 40px #4C8DFF12}
+    .card-hover:hover,.aia-card.card-hover:hover{border-color:#6E5BFF66;box-shadow:0 20px 48px #6E5BFF24}
+    .btn-primary,.btn-solid{background:linear-gradient(110deg,var(--primary),var(--electric-blue));border:1px solid transparent;color:var(--text);box-shadow:0 10px 24px #6E5BFF29}
+    .btn-primary::before,.btn-solid::before{content:"";position:absolute;inset:2px;border-radius:11px;background:#FFFFFFED;pointer-events:none}
+    .btn-primary,.btn-solid{isolation:isolate}
+    .btn-primary::before,.btn-solid::before{z-index:-1}
+    .btn-primary:hover,.btn-solid:hover{background:linear-gradient(110deg,var(--accent),var(--pink));box-shadow:0 12px 28px #00C2A829}
+    .btn-primary:hover::before,.btn-solid:hover::before{background:#FFFFFFD9}
+    .btn-soft{background:#FFFFFFC9;border-color:var(--soft-gray);color:var(--primary-dark)}
+    .btn-soft:hover{background:#00C2A812;border-color:var(--accent)}
+    .btn-status,.problem-item .solution{color:#007767}
+    .hero-label,.orbit-chip,.profile-label,.mobile-menu{background:#FFFFFFDE;border-color:#6E5BFF26;color:var(--text)}
+    .hero::after{background:radial-gradient(circle,#6E5BFF26,#4C8DFF1C 38%,transparent 68%)}
+    .ambient-one{background:#00C2A826}.ambient-two{background:#FF6FB526}
+    .orb-wrap::before{background:radial-gradient(circle,#FFFFFF,#4C8DFF33 39%,#6E5BFF22 58%,transparent 70%)}
+    .orb-1{background:conic-gradient(from 20deg,transparent 10%,#4C8DFF55 25%,transparent 40%,#6E5BFF55 60%,transparent 82%)}
+    .orb-2{border-color:#6E5BFF66}.orb-3{border-color:#4C8DFF88}.orb-4{border-color:#00C2A866}
+    .orb-core{background:radial-gradient(circle at 38% 35%,#FFFFFF,#4C8DFF 38%,#6E5BFF 70%,#FF6FB5 100%);box-shadow:inset -15px -18px 36px #5140CC55,inset 10px 12px 32px #FFFFFF99,0 0 58px #6E5BFF4D}
+    .orb-core::after{color:white;text-shadow:0 3px 20px #1F2A3780}
+    .dot-a{background:var(--electric-blue)}.dot-b{background:var(--pink)}.dot-c,.orbit-chip i{background:var(--accent)}.chip-two i{background:var(--primary)}
+    .photo-place{background:radial-gradient(circle at 51% 45%,#FFFFFF,#4C8DFF22 40%,#6E5BFF22 75%,#FF6FB51A);border-color:var(--soft-gray)}
+    .icon-square,.aia-icon,.problem-item .problem-check{background:linear-gradient(135deg,#6E5BFF18,#4C8DFF18);color:var(--primary-dark);border-color:#6E5BFF26}
+    .service-card:nth-child(3n+2) .icon-square{background:#00C2A81A;color:#007767;border-color:#00C2A833}
+    .service-card:nth-child(3n) .icon-square{background:#FF6FB51A;color:#A52D68;border-color:#FF6FB533}
+    .aia-section::before{background:radial-gradient(circle,#4C8DFF14,#6E5BFF0D 42%,#00C2A80A 58%,transparent 72%)}
+    .aia-card::before{background:radial-gradient(circle,#4C8DFF26,#FF6FB51A 45%,transparent 70%)}
+    .aia-card::after{background:var(--brand-gradient)}
+    .aia-card:hover .aia-icon{color:var(--primary-dark);box-shadow:0 0 0 6px #6E5BFF12,0 0 26px #4C8DFF33}
+    .aia-card .btn i{color:#007767}
+    .step-dot{background:white;border-color:#6E5BFF33;color:var(--primary-dark)}
+    .process-grid::before{background:var(--brand-gradient)}
+    .cta-band{background:radial-gradient(ellipse at 50% -15%,#6E5BFF26,var(--secondary) 62%);border-color:#4C8DFF33}
+    .requirements-card{background:linear-gradient(135deg,#4C8DFF14,#6E5BFF12,#FF6FB512);border-color:#6E5BFF26}
+    .contact-social i{color:var(--primary-dark)}
+    .contact-social:hover{background:#00C2A812;border-color:var(--accent);box-shadow:0 12px 28px #4C8DFF1A}
+    .contact-social:hover i{color:#007767}
+    .footer{background:var(--soft-gray);border-color:#4C8DFF26}
+    .mobile-menu a:hover{background:#6E5BFF0D}
+    .mobile-menu a[data-booking]{background:var(--soft-gray)!important;color:var(--primary-dark)!important}
+    [class*="text-slate-"],.footer-note,.social-text,.card-number{color:var(--muted)}
+    [class*="border-slate-"]{border-color:var(--soft-gray)}[class*="border-indigo-"]{border-color:var(--primary)}
+    .btn-primary,.btn-solid{background:linear-gradient(#1F2A374D,#1F2A374D),linear-gradient(110deg,var(--primary),var(--electric-blue));color:#FFFFFF}
+    .btn-primary::before,.btn-solid::before{display:none}
+    .btn-primary:hover,.btn-solid:hover{background:linear-gradient(110deg,var(--accent),var(--pink));color:var(--text)}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header id="siteNav" class="site-nav">
+    <div class="container-x h-full flex items-center justify-between gap-5">
+      <a class="brand" href="#home" aria-label="Ivy Yen 回到首頁">Ivy Yen<span class="brand-dot">.</span></a>
+      <nav class="desktop-menu hidden md:flex items-center gap-8" aria-label="主要導覽">
+        <a class="nav-link" href="#home">首頁 Home</a><a class="nav-link" href="#about">關於我 About</a><a class="nav-link" href="#expertise">專業優勢 Expertise</a><a class="nav-link" href="#solutions">AI 解決方案 Solutions</a><a class="nav-link" href="#ai-in-action">實戰應用 In Action</a><a class="nav-link" href="#contact">預約交流 Contact</a>
+      </nav>
+      <a class="desktop-cta btn btn-solid hidden md:inline-flex" data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer">預約 AI 應用交流 <span aria-hidden="true">↗</span></a>
+      <button id="menuToggle" class="mobile-toggle hidden items-center justify-center w-11 h-11 border border-slate-200 rounded-xl" aria-label="展開選單" aria-controls="mobileMenu" aria-expanded="false"><svg id="menuIcon" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+    <nav id="mobileMenu" class="mobile-menu" aria-label="手機導覽"><a href="#home">首頁 Home</a><a href="#about">關於我 About</a><a href="#expertise">專業優勢 Expertise</a><a href="#solutions">AI 解決方案 Solutions</a><a href="#ai-in-action">實戰應用 In Action</a><a href="#contact">預約交流 Contact</a><a data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer" style="background:#F7F9FC;color:#6E5BFF">預約 AI 應用交流 ↗</a></nav>
+  </header>
+  <main>
+    <!-- 01 Hero -->
+    <section id="home" class="hero" aria-labelledby="heroTitle"><canvas id="particleCanvas" aria-hidden="true"></canvas><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+      <div class="container-x grid grid-cols-2 gap-8 items-center hero-grid">
+        <div class="hero-content relative z-10">
+          <div class="hero-label"><span class="live-dot"></span>AI TRANSFORMATION × HUMAN POTENTIAL</div>
+          <h1 id="heroTitle" class="hero-title"><span class="type-line" data-type="讓 AI 走進工作，">讓 AI 走進工作，</span><span class="type-line text-gradient" data-type="讓改變真正發生。">讓改變真正發生。</span></h1>
+          <p class="hero-copy">從 AI 工具應用到企業流程優化，結合 28 年設計行銷實戰經驗，協助企業與個人提升效率、培育人才，讓 AI 真正創造價值。</p>
+          <p class="hero-quote">讓 AI 與數據，成為每個人的超能力。</p>
+          <div class="hero-buttons flex flex-wrap items-center gap-3 mt-9"><a class="btn btn-primary" data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer">預約 AI 應用交流 <span aria-hidden="true">↗</span><span class="btn-status">Status: Ready to Connect</span></a><a class="btn btn-soft" href="#solutions">探索 AI 解決方案 <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-stat"><div><strong>28<span class="text-gradient" style="display:inline;font-size:22px">+</span></strong><span>設計行銷實務經驗</span></div><div><strong>AI</strong><span>Transformation</span></div><div><strong>∞</strong><span>Human Potential</span></div></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orb-wrap"><div class="orb orb-4"></div><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div><div class="orb-core"></div><span class="orbit-dot dot-a"></span><span class="orbit-dot dot-b"></span><span class="orbit-dot dot-c"></span><div class="orbit-chip chip-one"><i></i> HUMAN × AI</div><div class="orbit-chip chip-two"><i></i> WORKFLOW OPTIMIZED <span class="mini-line"></span></div></div></div>
+      </div>
+    </section>
+    <!-- 02 About -->
+    <section id="about" class="section-pad section-alt" aria-labelledby="aboutTitle"><div class="container-x grid grid-cols-2 gap-20 items-center about-grid"><div class="reveal"><div class="photo-place" role="img" aria-label="個人形象照片預留位置；目前尚未提供照片"><div class="profile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg></div><div class="profile-label"><div><strong>顏苡筑 Ivy Yen</strong><br><span>個人形象照片｜可自行替換</span></div><span style="color:#1F2A37;font-size:10px">PHOTO / 01</span></div></div></div><div class="reveal"><span class="eyebrow">ABOUT IVY YEN</span><h2 id="aboutTitle" class="section-h mt-4 mb-7">28 年實戰經驗，<br><span class="text-gradient">讓科技更懂企業需求。</span></h2><div class="space-y-5 text-slate-600 text-[14px] leading-[2.05]"><p>我是顏苡筑 Ivy Yen，目前擔任 <strong class="text-slate-800">PX 大通電子教育訓練中心主管</strong>，專注於企業 AI 導入、人才培訓與跨部門流程優化。</p><p>擁有 28 年設計與行銷實務經驗，專業歷程橫跨品牌視覺、產品行銷、電商營運及 AI 技術應用。</p><p>我致力於將複雜的 AI 技術轉化成容易理解、容易執行的工作方法，協助企業把 AI 從新奇工具變成真正提升效率的實務能力。</p></div><p class="mt-8 border-l-[3px] border-indigo-400 pl-5 text-[16px] font-bold text-slate-800 leading-relaxed">「AI 不只是科技的進步，更是工作方式的進化。」</p><div class="grid grid-cols-3 gap-3 mt-10"><div class="metric"><strong>28+ Years</strong><span class="block mt-2">設計與行銷<br>實戰經驗</span></div><div class="metric"><strong>AI</strong><span class="block mt-2">企業 AI 導入<br>與流程優化</span></div><div class="metric"><strong>Talent</strong><span class="block mt-2">人才培訓與<br>AI 應用</span></div></div></div></div></section>
+    <!-- 03 Expertise -->
+    <section id="expertise" class="section-pad" aria-labelledby="expertiseTitle"><div class="container-x"><div class="max-w-3xl mx-auto text-center reveal"><span class="eyebrow">WHY IVY</span><h2 id="expertiseTitle" class="section-h mt-4">不只懂 AI，<span class="text-gradient">更懂如何讓 AI 真正落地。</span></h2><p class="section-lead mx-auto mt-5">以商業實戰為基礎，結合 AI 技術、流程改善與人才培訓，讓企業從知道 AI，進一步走向真正用好 AI。</p></div><div class="grid md:grid-cols-3 gap-5 mt-14"><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19h16M6 16V9m6 7V4m6 12v-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="card-number">01 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">28 年設計行銷實戰</h3><p class="text-[13px] leading-[1.95] text-slate-500">熟悉品牌經營、產品行銷與電商營運，能從商業需求出發，找出有價值的 AI 應用場景。</p></article><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M14 7h7m-3.5-3.5v7M7 14v7m-3.5-3.5h7"/></svg></div><span class="card-number">02 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">企業第一線 AI 導入</h3><p class="text-[13px] leading-[1.95] text-slate-500">具備 AI 工作流程、知識庫、客服、競品研究及營運分析等實務推動經驗，重視 AI 與既有工作的整合。</p></article><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5ZM5 11v6c3.8 3 10.2 3 14 0v-6M21 8v8"/></svg></div><span class="card-number">03 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">教育訓練與跨部門整合</h3><p class="text-[13px] leading-[1.95] text-slate-500">將複雜技術轉化為容易學習、容易執行的方法，協助團隊建立可持續的 AI 應用能力。</p></article></div></div></section>
+    <!-- 04 Business challenges -->
+    <section id="challenges" class="section-pad section-alt" aria-labelledby="challengeTitle"><div class="container-x grid lg:grid-cols-[.85fr_1.15fr] gap-14 lg:gap-20 items-center"><div class="reveal"><span class="eyebrow">FROM CHALLENGES TO SOLUTIONS</span><h2 id="challengeTitle" class="section-h mt-4 mb-6">你的企業，<br>是否也遇到這些 <span class="text-gradient">AI 導入難題？</span></h2><p class="section-lead">AI 的挑戰不只是工具選擇，更是如何讓新技術融入日常工作、產生實際成果。</p><div class="mt-10 inline-flex items-center gap-3 text-[#6E5BFF] font-bold text-sm"><span style="display:inline-block;width:30px;height:1px;background:#6E5BFF"></span>從問題出發，讓 AI 成為真正可用的解決方案。</div></div><div class="space-y-3 reveal"><article class="problem-item"><span class="problem-check">?</span><div><h3>工具太多，不知如何選擇</h3><p>缺少適合企業需求的 AI 導入方向。</p><p class="solution">→ 依企業需求與使用情境，評估適用的 AI 工具。</p></div></article><article class="problem-item"><span class="problem-check">?</span><div><h3>員工會用 AI，卻用不到工作上</h3><p>缺乏實際應用情境與標準化方法。</p><p class="solution">→ 建立可複製的應用案例與實作訓練。</p></div></article><article class="problem-item"><span class="problem-check">?</span><div><h3>重複工作太多，效率難以提升</h3><p>資料整理、報表與行政作業耗費大量時間。</p><p class="solution">→ 盤點重複流程，逐步導入自動化。</p></div></article><article class="problem-item"><span class="problem-check">?</span><div><h3>企業知識分散，經驗難以傳承</h3><p>文件、SOP 與產品資訊缺乏有效整合。</p><p class="solution">→ 整理內部知識庫，建立一致的查詢入口。</p></div></article><article class="problem-item"><span class="problem-check">?</span><div><h3>投入 AI，卻看不到具體成果</h3><p>缺乏目標規劃與成效評估機制。</p><p class="solution">→ 先定義目標與衡量指標，再持續優化。</p></div></article></div></div></section>
+    <!-- 05 Services -->
+    <section id="solutions" class="section-pad" aria-labelledby="solutionsTitle"><div class="container-x"><div class="text-center reveal"><span class="eyebrow">AI SOLUTIONS</span><h2 id="solutionsTitle" class="section-h mt-4">讓 AI 真正落地，<span class="text-gradient">創造工作與商業價值。</span></h2><p class="section-lead mx-auto mt-5">從教育訓練、流程自動化到數據決策，協助企業建立實用、可持續的 AI 工作模式。</p></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+      <article id="solution-training" class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 01</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M3 6.5 12 2l9 4.5-9 4.5-9-4.5ZM5 10v7l7 4 7-4v-7M21 6.5v9"/></svg></div><h3>企業 AI 教育訓練</h3><p>導入 ChatGPT、Claude 等 AI 工具，提升員工應用能力與團隊效率。</p></article>
+      <article id="solution-automation" class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 02</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="8" height="7" rx="2"/><rect x="14" y="14" width="8" height="7" rx="2"/><path d="M10 6.5h4a4 4 0 0 1 4 4V14M7 10v5a3 3 0 0 0 3 3h4"/></svg></div><h3>AI 工作流程自動化</h3><p>整合 AI Agent 與自動化工具，簡化報表、資料處理及重複性作業。</p></article>
+      <article class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 03</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H20v14H6a2 2 0 0 0-2 2V5.5ZM4 20a2 2 0 0 1 2-2h14M8 8h8M8 12h5"/></svg></div><h3>AI 知識庫與智能客服</h3><p>整合企業文件、產品資訊與 SOP，加速知識查詢與客戶服務。</p></article>
+      <article id="solution-marketing" class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 04</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="2"/><path d="m5 18 6-6 4 4 3-3 2 2"/></svg></div><h3>AI 行銷與創意設計</h3><p>運用 AI 生成圖像、影片、文案及電商內容，提升行銷產出效率。</p></article>
+      <article class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 05</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M3 20h18M6 16v-6m6 6V4m6 12v-9M3 17l5-5 4 3 7-9"/></svg></div><h3>AI 數據分析與決策</h3><p>應用於銷售分析、競品研究、庫存補貨與營運報表，輔助商業決策。</p></article>
+      <article class="glass service-card card-hover reveal"><span class="card-number">SOLUTION / 06</span><span class="card-arrow" aria-hidden="true">↗</span><div class="icon-square mt-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></svg></div><h3>企業 AI 導入規劃</h3><p>從需求盤點、工具評估到流程設計與人才培訓，建立可持續的 AI 應用模式。</p></article>
+    </div></div></section>
+    <!-- 06 Methodology -->
+    <section id="approach" class="section-pad section-alt" aria-labelledby="approachTitle"><div class="container-x"><div class="max-w-3xl reveal"><span class="eyebrow">HOW WE MAKE AI WORK</span><h2 id="approachTitle" class="section-h mt-4">從需求到落地，<span class="text-gradient">讓 AI 成為日常工作能力。</span></h2><p class="section-lead mt-5">好的 AI 導入不只是安裝工具，而是找到問題、設計方法、真正執行，並持續改善。</p></div><div class="process-grid mt-16 reveal"><article class="process-step"><div class="step-dot">01</div><div><small>DISCOVER</small><h3>需求盤點</h3><p>了解企業痛點、工作流程與實際需求。</p></div></article><article class="process-step"><div class="step-dot">02</div><div><small>DESIGN</small><h3>應用規劃</h3><p>評估適合的 AI 工具與導入情境。</p></div></article><article class="process-step"><div class="step-dot">03</div><div><small>IMPLEMENT</small><h3>實作與培訓</h3><p>建立工作方法、流程並協助團隊學習。</p></div></article><article class="process-step"><div class="step-dot">04</div><div><small>OPTIMIZE</small><h3>持續優化</h3><p>依實際應用成果調整流程與改善方向。</p></div></article></div></div></section>
+    <!-- 07 Contact / conversion -->
+    <!-- ===== AI in Action：AI 實戰應用與專業探索（按鈕捲動至 AI 解決方案中對應的服務卡片） ===== -->
+    <section id="ai-in-action" class="section-pad aia-section" aria-labelledby="aiaTitle">
+      <svg class="aia-flow" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="aiaFlowGrad" x1="0" x2="1"><stop offset="0" stop-color="#6E5BFF" stop-opacity="0"/><stop offset=".5" stop-color="#4C8DFF" stop-opacity=".55"/><stop offset="1" stop-color="#00C2A8" stop-opacity=".6"/></linearGradient></defs><path class="flow-base" d="M-20 170 C 240 110, 420 250, 640 190 S 1020 120, 1220 210"/><path class="flow-run" d="M-20 170 C 240 110, 420 250, 640 190 S 1020 120, 1220 210"/><path class="flow-base" d="M-20 450 C 260 520, 480 380, 700 440 S 1040 520, 1220 420"/><path class="flow-run delay" d="M-20 450 C 260 520, 480 380, 700 440 S 1040 520, 1220 420"/></svg>
+      <div class="container-x relative">
+        <div class="text-center reveal"><span class="eyebrow">AI IN ACTION</span><h2 id="aiaTitle" class="section-h mt-4">讓 AI 從想像<span class="text-gradient">走向實踐</span></h2><p class="section-lead mx-auto mt-5">結合設計行銷經驗與企業 AI 導入實戰，探索 AI 如何改變工作流程、提升效率並創造價值。</p></div>
+        <div class="grid md:grid-cols-3 gap-5 mt-14">
+          <article class="aia-card card-hover reveal"><div class="flex items-start justify-between"><div class="aia-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div><span class="card-number">01 / IN ACTION</span></div><h3>企業 AI 導入與流程自動化</h3><p>從工作流程分析、AI Agent 到自動化應用，協助企業減少重複工作，讓 AI 真正融入日常營運。</p><a class="btn btn-soft" href="#solution-automation">探索 AI 應用 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></article>
+          <article class="aia-card card-hover reveal"><div class="flex items-start justify-between"><div class="aia-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><span class="card-number">02 / IN ACTION</span></div><h3>AI 行銷創新與數據應用</h3><p>結合 28 年設計行銷經驗，運用 AI 加速內容創作、競品分析、電商營運與數據決策。</p><a class="btn btn-soft" href="#solution-marketing">探索行銷應用 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></article>
+          <article class="aia-card card-hover reveal"><div class="flex items-start justify-between"><div class="aia-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div><span class="card-number">03 / IN ACTION</span></div><h3>AI 人才培訓與知識賦能</h3><p>從 AI 工具教學、實務操作到企業知識庫應用，協助團隊建立 AI 能力，讓學習真正轉化為工作成果。</p><a class="btn btn-soft" href="#solution-training">探索 AI 學習 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></article>
+        </div>
+        <p class="aia-slogan reveal">「不只是學會 AI，而是讓 AI 真正創造價值。」</p>
+      </div>
+    </section>
+
+    <!-- Contact channels and requirements form, before booking -->
+    <section id="contact-me" class="section-pad section-alt" aria-labelledby="contactMeTitle">
+      <div class="container-x contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">CONTACT ME</span>
+          <h2 id="contactMeTitle" class="section-h mt-4">聯絡我<span class="text-gradient">，開啟合作可能。</span></h2>
+          <p class="section-lead mt-5">歡迎透過社群與我交流，或先填寫需求表單，分享你的目標與想法。</p>
+          <nav class="contact-socials" aria-label="聯絡我的社群平台">
+            <a class="contact-social" style="--social-color:#1F2A37" href="https://line.me/ti/p/8nTa2YNilE" target="_blank" rel="noopener noreferrer" aria-label="透過 LINE 聯絡我（另開分頁）"><i class="fa-brands fa-line" aria-hidden="true"></i><span>LINE</span></a>
+            <a class="contact-social" style="--social-color:#6E5BFF" href="https://www.facebook.com/starloveivy" target="_blank" rel="noopener noreferrer" aria-label="查看我的 Facebook（另開分頁）"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            <a class="contact-social" style="--social-color:#1F2A37" href="https://www.linkedin.com/in/ivy-yen-a89b4a271/" target="_blank" rel="noopener noreferrer" aria-label="查看我的 LinkedIn（另開分頁）"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+            <a class="contact-social" style="--social-color:#1F2A37" href="https://github.com/ivy-yen/My-Vault" target="_blank" rel="noopener noreferrer" aria-label="查看我的 GitHub My-Vault 專案（另開分頁）"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+          </nav>
+        </div>
+        <div class="requirements-card reveal" aria-labelledby="requirementsTitle">
+          <div class="icon-square"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div>
+          <h3 id="requirementsTitle">填寫需求表單</h3>
+          <p>有企業 AI 導入、團隊培訓或流程優化的需求？先告訴我你的挑戰與期待，讓後續交流更聚焦。</p>
+          <a class="btn btn-solid" href="https://forms.gle/dneWESkZ7smrFb8N8" target="_blank" rel="noopener noreferrer">填寫需求表單 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <small class="requirements-note">點擊後將另開分頁，前往 Google 表單填寫。</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad" aria-labelledby="contactTitle"><div class="container-x reveal"><div class="cta-band"><div class="cta-content"><span class="eyebrow">LET'S CONNECT</span><h2 id="contactTitle" class="section-h mt-5">讓 AI 成為你的<br><span class="text-gradient">下一個成長動力。</span></h2><p class="section-lead mx-auto mt-6 mb-9">無論是企業 AI 導入、團隊培訓，還是工作流程優化，都歡迎一起探索適合你的 AI 應用方式。</p><a class="btn btn-primary" data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer">預約 AI 應用交流 <span aria-hidden="true">↗</span><span class="btn-status">Status: Ready to Connect</span></a></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container-x flex flex-col md:flex-row gap-7 justify-between md:items-center"><div><a href="#home" class="brand text-[24px]">Ivy Yen<span class="brand-dot">.</span></a><p class="footer-note mt-2">讓 AI 與數據，成為每個人的超能力。</p><p class="social-text mt-3">AI TRAINING · AI TRANSFORMATION · BUSINESS INNOVATION</p></div><a href="#home" class="btn btn-soft self-start">返回頂部 ↑</a></div><div class="container-x mt-10 pt-5 border-t border-slate-200"><p class="footer-note">© 2026 Ivy Yen. All Rights Reserved.</p></div></footer>
+  <script>
+  'use strict';
+  /* ===== 易維護設定：預約網址集中於此，會同步更新所有 data-booking 連結 ===== */
+  const SITE_CONFIG = { bookingUrl:'https://calendar.app.google/yrGdqPfziZRB4BLG9', particleMaxDesktop:55, particleMaxMobile:23 };
+  document.querySelectorAll('[data-booking]').forEach(a=>a.href=SITE_CONFIG.bookingUrl);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Sticky navigation
+  const nav=document.getElementById('siteNav');
+  const updateNav=()=>nav.classList.toggle('scrolled',window.scrollY>18);
+  addEventListener('scroll',updateNav,{passive:true});updateNav();
+  // Mobile accessible menu
+  const menuToggle=document.getElementById('menuToggle'),mobileMenu=document.getElementById('mobileMenu');
+  function closeMenu(){mobileMenu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','展開選單');}
+  menuToggle.addEventListener('click',()=>{const opening=!mobileMenu.classList.contains('open');mobileMenu.classList.toggle('open',opening);menuToggle.setAttribute('aria-expanded',String(opening));menuToggle.setAttribute('aria-label',opening?'收合選單':'展開選單');});
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+  // Typewriter: reserve text space by keeping the full original phrase in a hidden aria-label and fixed line height
+  const lines=[...document.querySelectorAll('[data-type]')];
+  function runTyping(){if(prefersReducedMotion.matches)return;lines.forEach(el=>{el.textContent='';el.classList.add('typing-cursor');});let lineIndex=0,charIndex=0;function advance(){const target=lines[lineIndex];const phrase=target.dataset.type;target.textContent=Array.from(phrase).slice(0,charIndex+1).join('');charIndex++;if(charIndex<Array.from(phrase).length){setTimeout(advance,75);return;}target.classList.remove('typing-cursor');target.classList.add('type-done');lineIndex++;charIndex=0;if(lineIndex<lines.length){lines[lineIndex].classList.add('typing-cursor');setTimeout(advance,260)}}setTimeout(advance,520)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',runTyping);else runTyping();
+  // Reveal: show all content when IntersectionObserver is unavailable
+  const revealNodes=document.querySelectorAll('.reveal');
+  if(prefersReducedMotion.matches||!('IntersectionObserver' in window)){revealNodes.forEach(el=>el.classList.add('visible'))}else{const io=new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px -25px 0px'});revealNodes.forEach(el=>io.observe(el))}
+  // Canvas: adaptive low-cost particle network, stops when hidden or reduced-motion
+  (function(){const canvas=document.getElementById('particleCanvas');if(!canvas||prefersReducedMotion.matches)return;const ctx=canvas.getContext('2d');if(!ctx)return;let width=0,height=0,points=[],frame=0,raf=0,visible=true;
+    function resize(){const rect=canvas.getBoundingClientRect();width=rect.width;height=rect.height;if(!width||!height)return;const dpr=Math.min(devicePixelRatio||1,1.6);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);let n=width<700?SITE_CONFIG.particleMaxMobile:SITE_CONFIG.particleMaxDesktop;points=Array.from({length:n},()=>({x:Math.random()*width,y:Math.random()*height,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.5+.5}))}
+    function draw(){if(!visible)return;frame++;ctx.clearRect(0,0,width,height);for(let i=0;i<points.length;i++){let p=points[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>width)p.vx*=-1;if(p.y<0||p.y>height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(110,91,255,.28)';ctx.fill();for(let j=i+1;j<points.length;j++){let q=points[j],dist=Math.hypot(p.x-q.x,p.y-q.y);if(dist<140){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(110,91,255,${(1-dist/140)*.11})`;ctx.lineWidth=.8;ctx.stroke()}}}raf=requestAnimationFrame(draw)}
+    const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting&&!document.hidden;if(visible&&!raf)draw();if(!visible){cancelAnimationFrame(raf);raf=0}});observer.observe(canvas);
+    const onVisibility=()=>{visible=!document.hidden&&canvas.getBoundingClientRect().bottom>0;if(!visible){cancelAnimationFrame(raf);raf=0}else if(!raf)draw()};document.addEventListener('visibilitychange',onVisibility);addEventListener('resize',()=>{resize()},{passive:true});resize();
+  })();
+  </script>
+</body>
+</html>
