@@ -167,24 +167,91 @@
     .btn-primary,.btn-solid{background:linear-gradient(#1F2A374D,#1F2A374D),linear-gradient(110deg,var(--primary),var(--electric-blue));color:#FFFFFF}
     .btn-primary::before,.btn-solid::before{display:none}
     .btn-primary:hover,.btn-solid:hover{background:linear-gradient(110deg,var(--accent),var(--pink));color:var(--text)}
+
+    /* Personal portrait and real-world gallery */
+    .ivy-portrait{margin:0;position:relative;border-radius:28px;overflow:hidden;background:var(--soft-gray);border:1px solid #6E5BFF26;box-shadow:0 24px 65px #4C8DFF1A;max-width:510px}
+    .ivy-portrait>img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+    .ivy-portrait figcaption{position:absolute;left:20px;right:20px;bottom:20px;padding:18px 22px;border-radius:18px;background:#FFFFFFE8;backdrop-filter:blur(16px);border:1px solid white}
+    .ivy-portrait strong{display:block;font-size:23px;margin:5px 0}.ivy-portrait figcaption>span:last-child{font-size:12px;color:var(--muted)}
+    .portfolio-heading{display:grid;grid-template-columns:1.3fr 1fr;align-items:end;gap:40px;margin-bottom:40px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .portfolio-card{margin:0;background:#FFFFFFD9;border:1px solid var(--soft-gray);border-radius:22px;overflow:hidden;box-shadow:0 12px 36px #4C8DFF12}
+    .portfolio-open{width:100%;display:block;position:relative;overflow:hidden;cursor:zoom-in;background:linear-gradient(135deg,#E9EEF5,#F7F9FC);padding:0;border:0}
+    .portfolio-open img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;transition:transform .4s}
+    .portfolio-open:hover img{transform:scale(1.025)}.portfolio-zoom{position:absolute;right:14px;bottom:14px;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#FFFFFFEB;color:var(--primary-dark);font-size:20px}
+    .portfolio-card figcaption{padding:22px}.portfolio-card h3{font-size:16px;font-weight:700;margin-top:8px;color:var(--text)}
+    .portfolio-dialog{width:min(1100px,94vw);max-height:92vh;padding:52px 16px 16px;border:1px solid #6E5BFF33;border-radius:22px;background:#F7F9FC;color:var(--text);overflow:auto;margin:auto}
+    .portfolio-dialog::backdrop{background:#1F2A37D9;backdrop-filter:blur(8px)}.portfolio-dialog figure{margin:0}.portfolio-dialog img{display:block;max-width:100%;max-height:72vh;width:auto;height:auto;object-fit:contain;margin:auto}.portfolio-dialog figcaption{text-align:center;padding:16px 8px 0;font-size:14px}
+    .portfolio-close{position:absolute;right:12px;top:10px;border:1px solid var(--soft-gray);border-radius:50%;background:white;color:var(--text);width:36px;height:36px;cursor:pointer}body.photo-open{overflow:hidden}
+    @media(min-width:901px) and (max-width:1250px){.desktop-menu{gap:12px!important}.nav-link{font-size:11px}.desktop-cta{font-size:12px;padding-inline:12px}}
+    @media(max-width:900px){.ivy-portrait{margin-inline:auto}.portfolio-heading{grid-template-columns:1fr;gap:20px}}
+    @media(max-width:560px){.portfolio-grid{grid-template-columns:1fr;gap:20px}.ivy-portrait figcaption{left:12px;right:12px;bottom:12px;padding:14px}.ivy-portrait strong{font-size:20px}.portfolio-heading{margin-bottom:28px}}
+    @media(prefers-reduced-motion:reduce){.portfolio-open img{transition:none}.portfolio-open:hover img{transform:none}}
+
+    /* Full-bleed video hero: a dark scrim preserves legibility over any frame. */
+    .hero{min-height:100vh;min-height:100svh;padding:150px 0 100px;background:#101827 url('https://i.ytimg.com/vi/cAaC26Gb5Nc/maxresdefault.jpg') center/cover no-repeat;color:#FFFFFF}
+    .hero::before,.hero::after,.hero-art{display:none}
+    .hero-video{position:absolute;inset:0;z-index:-3;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .8s}
+    .hero.video-playing .hero-video{opacity:1}
+    .hero-video-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%}
+    .hero-video iframe{display:block;width:100%;height:100%;border:0;pointer-events:none}
+    .hero-video-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,17,32,.88),rgba(10,17,32,.72) 60%,rgba(10,17,32,.60))}
+    .hero-grid{grid-template-columns:1fr!important;width:min(1200px,calc(100% - 48px))}
+    .hero-content{max-width:790px}
+    .hero-title{font-size:clamp(40px,5.4vw,76px);line-height:1.35;letter-spacing:-.035em;font-weight:800;text-shadow:0 3px 24px #00000033}
+    .hero .text-gradient{background:none;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF}
+    .hero-copy{max-width:620px;color:#F7F9FC;font-size:17px;line-height:2}
+    .hero-quote{color:#C5FFF5}.hero-label{background:#10182780;border-color:#FFFFFF4D;color:white;backdrop-filter:blur(12px)}
+    .hero-stat{border-color:#FFFFFF40;max-width:600px}.hero-stat span{color:#E9EEF5}.hero-stat strong{color:white}
+    .hero .btn-soft{background:#FFFFFFF2;color:#1F2A37;border-color:#FFFFFF80}
+    .hero .btn-soft:hover{background:#E9EEF5}.hero .btn-status{color:#C5FFF5}
+    .hero-video-toggle{position:absolute;right:24px;bottom:24px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px;border:1px solid #FFFFFF66;border-radius:100px;background:#101827CC;color:white;font:600 12px var(--font);cursor:pointer;backdrop-filter:blur(12px)}
+    .hero-video-toggle:hover{background:#1F2A37}
+    @media(max-width:640px){.hero{padding:126px 0 100px}.hero-grid{width:calc(100% - 36px)}.hero-title{font-size:clamp(30px,8vw,46px)}.hero-copy{font-size:14px;line-height:1.95}.hero-video-shade{background:#0A1120BF}.hero-video-toggle{right:18px;bottom:18px}.hero-buttons{gap:12px}.hero-buttons .btn{flex:1 1 200px}.hero-stat{gap:24px}}
+    .inquiry-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}.inquiry-info{padding-top:16px}
+    .inquiry-details{font-style:normal;margin-top:36px;display:grid;gap:24px}.inquiry-details>div{display:flex;gap:16px;align-items:flex-start}.inquiry-details i{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;background:#6E5BFF12;color:var(--primary-dark);border-radius:14px}.inquiry-details span{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}.inquiry-details a,.inquiry-details p{font-size:15px;overflow-wrap:anywhere}.inquiry-details a:hover{text-decoration:underline;color:var(--primary-dark)}
+    .inquiry-form{padding:36px;border:1px solid #6E5BFF26;border-radius:28px;background:linear-gradient(145deg,#FFFFFF,#F7F9FC);box-shadow:0 20px 60px #4C8DFF12}.inquiry-form h3{font-size:26px;font-weight:800}.inquiry-intro{font-size:13px;color:var(--muted);margin:8px 0 26px}.inquiry-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.inquiry-form label,.inquiry-form legend{display:block;font-size:14px;font-weight:600;margin-bottom:9px}.inquiry-form input:not([type=checkbox]),.inquiry-form select,.inquiry-form textarea{display:block;width:100%;min-width:0;min-height:48px;border:1px solid #CBD3E2;border-radius:12px;background:white;padding:12px 14px;color:var(--text);font:400 14px var(--font)}.inquiry-form textarea{resize:vertical;line-height:1.8}.inquiry-form input::placeholder,.inquiry-form textarea::placeholder{color:#657287;opacity:1}.inquiry-form input:focus-visible,.inquiry-form select:focus-visible,.inquiry-form textarea:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-color:var(--primary)}.inquiry-field,.inquiry-needs{margin-top:22px}.inquiry-needs{border:0;padding:0}.inquiry-options{display:flex;flex-wrap:wrap;gap:10px}.inquiry-options label{display:inline-flex;align-items:center;gap:9px;margin:0;padding:12px;border:1px solid var(--soft-gray);border-radius:12px;background:white;cursor:pointer;font-size:13px}.inquiry-options input{accent-color:var(--primary);width:18px;height:18px}.inquiry-field small{display:block;font-size:12px;color:var(--muted);margin-top:8px}.inquiry-error{color:#B42318;font-size:13px;margin-top:8px}.inquiry-send-note{font-size:12px;color:var(--muted);line-height:1.9;margin:24px 0 18px}.inquiry-send-note a{color:var(--primary-dark);text-decoration:underline}.inquiry-status{font-size:13px;color:var(--primary-dark);line-height:1.8;margin-top:14px}
+    @media(max-width:900px){.inquiry-layout{grid-template-columns:1fr;gap:36px}.inquiry-details{grid-template-columns:1fr 1fr}}@media(max-width:600px){.inquiry-form{padding:24px 20px;border-radius:22px}.inquiry-fields,.inquiry-details{grid-template-columns:1fr}.inquiry-form .btn{width:100%;font-size:13px}.inquiry-options label{flex:1 1 auto;justify-content:center}}
+    .inquiry-form button:disabled{opacity:.65;cursor:wait;transform:none}.inquiry-form:not([aria-busy]) button:disabled{cursor:default}
+
+    .inquiry-confirm{width:min(480px,calc(100vw - 36px));max-height:90vh;overflow:auto;margin:auto;padding:36px 30px;border:1px solid #6E5BFF33;border-radius:26px;background:linear-gradient(145deg,#FFFFFF,#F7F9FC);color:var(--text);text-align:center;box-shadow:0 30px 100px #1F2A3733}
+    .inquiry-confirm::backdrop{background:#1F2A37B3;backdrop-filter:blur(7px)}
+    .inquiry-confirm-icon{display:grid;place-items:center;width:66px;height:66px;margin:0 auto 22px;border-radius:22px;background:var(--brand-gradient);color:white;font-size:26px}
+    .inquiry-confirm h2{font-size:clamp(23px,5vw,29px);line-height:1.6;font-weight:800;letter-spacing:-.025em;margin:14px 0}
+    .inquiry-confirm p{font-size:13px;color:var(--muted);line-height:1.9;overflow-wrap:anywhere;margin-bottom:26px}.inquiry-confirm .btn{min-width:160px}
+    body:has(#inquiryConfirmDialog[open]){overflow:hidden}
+
+    /* Exact horizontal logo from the supplied brand board; clip only the surrounding board. */
+    .ivy-logo-link{display:inline-flex;align-items:center;flex-shrink:0;line-height:1;border-radius:10px}
+    .ivy-logo-window{position:relative;display:block;width:184px;aspect-ratio:568/185;overflow:hidden;background:#FFFFFF;border-radius:8px}
+    .ivy-logo-window img{position:absolute;display:block;max-width:none!important;width:254.929577%;height:auto;left:-18.661972%;top:-315.135135%;pointer-events:none}
+    .ivy-logo-footer .ivy-logo-window{width:240px}
+    @media(min-width:901px) and (max-width:1250px){.site-nav .ivy-logo-window{width:148px}.desktop-menu{gap:10px!important}.nav-link{font-size:11px}}
+    @media(max-width:640px){.site-nav .ivy-logo-window{width:160px}.ivy-logo-footer .ivy-logo-window{width:220px}}
+  
+    /* 2027年度計畫：獨立專頁入口 */
+    .annual-plan-entry{display:flex;align-items:center;gap:30px;margin-top:40px;padding:30px 34px;border:1px solid #6E5BFF40;border-radius:24px;background:linear-gradient(110deg,#FFFFFF,#F0EDFF 60%,#EAF8F4);box-shadow:0 14px 40px #4C8DFF10;position:relative;transition:transform .25s,box-shadow .25s}
+    .annual-plan-entry:hover{transform:translateY(-3px);box-shadow:0 20px 45px #6E5BFF20}.annual-entry-art{position:relative;display:block;width:104px;height:90px;flex-shrink:0}.annual-entry-art i{position:absolute;border-radius:50%;border:1px solid #6E5BFF55;background:linear-gradient(135deg,#6E5BFF,#4C8DFF);width:70px;height:70px;left:0;top:2px}.annual-entry-art i:nth-child(2){width:52px;height:52px;left:52px;top:35px;background:#E5F7F2;border-color:#00C2A877}.annual-entry-art i:nth-child(3){width:28px;height:28px;left:14px;top:66px;background:#FFEEF6;border-color:#FF6FB577}.annual-entry-copy{display:flex;flex-direction:column;gap:6px;flex:1}.annual-entry-copy small{font-size:11px;letter-spacing:.08em;color:#5140CC;font-weight:800}.annual-entry-copy strong{font-size:25px;line-height:1.5;color:#1F2A37}.annual-entry-copy>span{font-size:13px;line-height:1.9;color:#526079}.annual-entry-go{font-size:13px;color:#5140CC;font-weight:750;white-space:nowrap}.annual-entry-go b{margin-left:10px;font-weight:400}
+    @media(max-width:640px){.annual-plan-entry{padding:24px;gap:18px;flex-wrap:wrap}.annual-entry-art{width:77px;height:80px;transform:scale(.85);transform-origin:left center;margin-right:-10px}.annual-entry-copy strong{font-size:20px}.annual-entry-copy>span{font-size:12px}.annual-entry-go{margin-left:0;width:100%;padding-top:15px;border-top:1px solid #6E5BFF22}}
+    @media(prefers-reduced-motion:reduce){.annual-plan-entry:hover{transform:none}}
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <header id="siteNav" class="site-nav">
     <div class="container-x h-full flex items-center justify-between gap-5">
-      <a class="brand" href="#home" aria-label="Ivy Yen 回到首頁">Ivy Yen<span class="brand-dot">.</span></a>
+      <a class="brand ivy-logo-link" href="#home" aria-label="Ivy Yen 回到首頁"><span class="ivy-logo-window"><img src="assets/brand/ivy-brand-board.png" alt="Ivy Yen｜AI × Design × Marketing" width="1448" height="1086" decoding="async"></span></a>
       <nav class="desktop-menu hidden md:flex items-center gap-8" aria-label="主要導覽">
-        <a class="nav-link" href="#home">首頁 Home</a><a class="nav-link" href="#about">關於我 About</a><a class="nav-link" href="#expertise">專業優勢 Expertise</a><a class="nav-link" href="#solutions">AI 解決方案 Solutions</a><a class="nav-link" href="#ai-in-action">實戰應用 In Action</a><a class="nav-link" href="#contact">預約交流 Contact</a>
+        <a class="nav-link" href="#home">首頁 Home</a><a class="nav-link" href="#about">關於我 About</a><a class="nav-link" href="#expertise">專業優勢 Expertise</a><a class="nav-link" href="#solutions">AI 解決方案 Solutions</a><a class="nav-link" href="#portfolio">現場紀錄</a><a class="nav-link" href="#ai-in-action">實戰應用 In Action</a><a class="nav-link" href="#contact">預約交流 Contact</a>
       </nav>
       <a class="desktop-cta btn btn-solid hidden md:inline-flex" data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer">預約 AI 應用交流 <span aria-hidden="true">↗</span></a>
       <button id="menuToggle" class="mobile-toggle hidden items-center justify-center w-11 h-11 border border-slate-200 rounded-xl" aria-label="展開選單" aria-controls="mobileMenu" aria-expanded="false"><svg id="menuIcon" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
-    <nav id="mobileMenu" class="mobile-menu" aria-label="手機導覽"><a href="#home">首頁 Home</a><a href="#about">關於我 About</a><a href="#expertise">專業優勢 Expertise</a><a href="#solutions">AI 解決方案 Solutions</a><a href="#ai-in-action">實戰應用 In Action</a><a href="#contact">預約交流 Contact</a><a data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer" style="background:#F7F9FC;color:#6E5BFF">預約 AI 應用交流 ↗</a></nav>
+    <nav id="mobileMenu" class="mobile-menu" aria-label="手機導覽"><a href="#home">首頁 Home</a><a href="#about">關於我 About</a><a href="#expertise">專業優勢 Expertise</a><a href="#solutions">AI 解決方案 Solutions</a><a href="#portfolio">現場紀錄</a><a href="#ai-in-action">實戰應用 In Action</a><a href="annual-plan-2027.html">年度計畫</a><a href="#contact">預約交流 Contact</a><a data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer" style="background:#F7F9FC;color:#6E5BFF">預約 AI 應用交流 ↗</a></nav>
   </header>
   <main>
     <!-- 01 Hero -->
-    <section id="home" class="hero" aria-labelledby="heroTitle"><canvas id="particleCanvas" aria-hidden="true"></canvas><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <section id="home" class="hero" aria-labelledby="heroTitle"><div class="hero-video" aria-hidden="true"><div class="hero-video-frame"><div id="heroVideoPlayer"></div></div></div><div class="hero-video-shade" aria-hidden="true"></div><button id="heroVideoToggle" class="hero-video-toggle" type="button" aria-label="播放背景影片">播放背景影片 <span aria-hidden="true">▶</span></button>
       <div class="container-x grid grid-cols-2 gap-8 items-center hero-grid">
         <div class="hero-content relative z-10">
           <div class="hero-label"><span class="live-dot"></span>AI TRANSFORMATION × HUMAN POTENTIAL</div>
@@ -198,7 +265,8 @@
       </div>
     </section>
     <!-- 02 About -->
-    <section id="about" class="section-pad section-alt" aria-labelledby="aboutTitle"><div class="container-x grid grid-cols-2 gap-20 items-center about-grid"><div class="reveal"><div class="photo-place" role="img" aria-label="個人形象照片預留位置；目前尚未提供照片"><div class="profile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg></div><div class="profile-label"><div><strong>顏苡筑 Ivy Yen</strong><br><span>個人形象照片｜可自行替換</span></div><span style="color:#1F2A37;font-size:10px">PHOTO / 01</span></div></div></div><div class="reveal"><span class="eyebrow">ABOUT IVY YEN</span><h2 id="aboutTitle" class="section-h mt-4 mb-7">28 年實戰經驗，<br><span class="text-gradient">讓科技更懂企業需求。</span></h2><div class="space-y-5 text-slate-600 text-[14px] leading-[2.05]"><p>我是顏苡筑 Ivy Yen，目前擔任 <strong class="text-slate-800">PX 大通電子教育訓練中心主管</strong>，專注於企業 AI 導入、人才培訓與跨部門流程優化。</p><p>擁有 28 年設計與行銷實務經驗，專業歷程橫跨品牌視覺、產品行銷、電商營運及 AI 技術應用。</p><p>我致力於將複雜的 AI 技術轉化成容易理解、容易執行的工作方法，協助企業把 AI 從新奇工具變成真正提升效率的實務能力。</p></div><p class="mt-8 border-l-[3px] border-indigo-400 pl-5 text-[16px] font-bold text-slate-800 leading-relaxed">「AI 不只是科技的進步，更是工作方式的進化。」</p><div class="grid grid-cols-3 gap-3 mt-10"><div class="metric"><strong>28+ Years</strong><span class="block mt-2">設計與行銷<br>實戰經驗</span></div><div class="metric"><strong>AI</strong><span class="block mt-2">企業 AI 導入<br>與流程優化</span></div><div class="metric"><strong>Talent</strong><span class="block mt-2">人才培訓與<br>AI 應用</span></div></div></div></div></section>
+    <section id="about" class="section-pad section-alt" aria-labelledby="aboutTitle"><div class="container-x grid grid-cols-2 gap-20 items-center about-grid"><div class="reveal"><figure class="ivy-portrait"><img src="assets/portfolio/ivy-portrait.webp" alt="顏苡筑 Ivy Yen 職場肖像" width="1122" height="1402" loading="lazy" decoding="async"><figcaption><span class="eyebrow">MEET IVY</span><strong>顏苡筑 Ivy Yen</strong><span>AI 訓練師 · 企業 AI 導入推動者</span></figcaption></figure></div><div class="reveal"><span class="eyebrow">ABOUT IVY YEN</span><h2 id="aboutTitle" class="section-h mt-4 mb-7">28 年實戰經驗，<br><span class="text-gradient">讓科技更懂企業需求。</span></h2><div class="space-y-5 text-slate-600 text-[14px] leading-[2.05]"><p>我是顏苡筑 Ivy Yen，目前擔任 <strong class="text-slate-800">PX 大通電子教育訓練中心主管</strong>，專注於企業 AI 導入、人才培訓與跨部門流程優化。</p><p>擁有 28 年設計與行銷實務經驗，專業歷程橫跨品牌視覺、產品行銷、電商營運及 AI 技術應用。</p><p>我致力於將複雜的 AI 技術轉化成容易理解、容易執行的工作方法，協助企業把 AI 從新奇工具變成真正提升效率的實務能力。</p></div><p class="mt-8 border-l-[3px] border-indigo-400 pl-5 text-[16px] font-bold text-slate-800 leading-relaxed">「AI 不只是科技的進步，更是工作方式的進化。」</p><div class="grid grid-cols-3 gap-3 mt-10"><div class="metric"><strong>28+ Years</strong><span class="block mt-2">設計與行銷<br>實戰經驗</span></div><div class="metric"><strong>AI</strong><span class="block mt-2">企業 AI 導入<br>與流程優化</span></div><div class="metric"><strong>Talent</strong><span class="block mt-2">人才培訓與<br>AI 應用</span></div></div></div></div></section>
+<section id="portfolio" class="section-pad section-alt" aria-labelledby="portfolioTitle"><div class="container-x"><div class="portfolio-heading"><div><span class="eyebrow">PEOPLE · LEARNING · PRACTICE</span><h2 id="portfolioTitle" class="section-h mt-4">從分享走進實作，<br><span class="text-gradient">記錄每一次交流。</span></h2></div><p class="section-lead">內部訓練、團隊專案與走訪剪影，留下工作現場的真實片刻。點選照片，觀看完整畫面。</p></div><div class="portfolio-grid"><figure class="portfolio-card"><button class="portfolio-open" type="button" data-photo="assets/portfolio/training.webp" data-caption="內訓現場｜課程分享與團隊交流" aria-label="放大照片：內訓現場｜課程分享與團隊交流"><img src="assets/portfolio/training-thumb.webp" alt="內訓現場｜課程分享與團隊交流" loading="lazy" decoding="async"><span class="portfolio-zoom" aria-hidden="true">↗</span></button><figcaption><span class="eyebrow">TRAINING</span><h3>內訓現場｜課程分享與團隊交流</h3></figcaption></figure><figure class="portfolio-card"><button class="portfolio-open" type="button" data-photo="assets/portfolio/team.webp" data-caption="團隊專案｜辦公室工作紀錄" aria-label="放大照片：團隊專案｜辦公室工作紀錄"><img src="assets/portfolio/team-thumb.webp" alt="團隊專案｜辦公室工作紀錄" loading="lazy" decoding="async"><span class="portfolio-zoom" aria-hidden="true">↗</span></button><figcaption><span class="eyebrow">PROJECT & MOMENTS</span><h3>團隊專案｜辦公室工作紀錄</h3></figcaption></figure><figure class="portfolio-card"><button class="portfolio-open" type="button" data-photo="assets/portfolio/project.webp" data-caption="團隊專案｜產品與夥伴交流" aria-label="放大照片：團隊專案｜產品與夥伴交流"><img src="assets/portfolio/project-thumb.webp" alt="團隊專案｜產品與夥伴交流" loading="lazy" decoding="async"><span class="portfolio-zoom" aria-hidden="true">↗</span></button><figcaption><span class="eyebrow">PROJECT & MOMENTS</span><h3>團隊專案｜產品與夥伴交流</h3></figcaption></figure></div></div></section><dialog id="portfolioDialog" class="portfolio-dialog" aria-label="照片放大檢視"><button type="button" class="portfolio-close" aria-label="關閉照片">✕</button><figure><img alt=""><figcaption></figcaption></figure></dialog>
     <!-- 03 Expertise -->
     <section id="expertise" class="section-pad" aria-labelledby="expertiseTitle"><div class="container-x"><div class="max-w-3xl mx-auto text-center reveal"><span class="eyebrow">WHY IVY</span><h2 id="expertiseTitle" class="section-h mt-4">不只懂 AI，<span class="text-gradient">更懂如何讓 AI 真正落地。</span></h2><p class="section-lead mx-auto mt-5">以商業實戰為基礎，結合 AI 技術、流程改善與人才培訓，讓企業從知道 AI，進一步走向真正用好 AI。</p></div><div class="grid md:grid-cols-3 gap-5 mt-14"><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19h16M6 16V9m6 7V4m6 12v-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="card-number">01 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">28 年設計行銷實戰</h3><p class="text-[13px] leading-[1.95] text-slate-500">熟悉品牌經營、產品行銷與電商營運，能從商業需求出發，找出有價值的 AI 應用場景。</p></article><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M14 7h7m-3.5-3.5v7M7 14v7m-3.5-3.5h7"/></svg></div><span class="card-number">02 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">企業第一線 AI 導入</h3><p class="text-[13px] leading-[1.95] text-slate-500">具備 AI 工作流程、知識庫、客服、競品研究及營運分析等實務推動經驗，重視 AI 與既有工作的整合。</p></article><article class="glass feature-card card-hover reveal"><div class="flex items-start justify-between"><div class="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5ZM5 11v6c3.8 3 10.2 3 14 0v-6M21 8v8"/></svg></div><span class="card-number">03 / EXPERTISE</span></div><h3 class="text-[19px] font-extrabold mt-8 mb-3">教育訓練與跨部門整合</h3><p class="text-[13px] leading-[1.95] text-slate-500">將複雜技術轉化為容易學習、容易執行的方法，協助團隊建立可持續的 AI 應用能力。</p></article></div></div></section>
     <!-- 04 Business challenges -->
@@ -220,6 +288,8 @@
       <svg class="aia-flow" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="aiaFlowGrad" x1="0" x2="1"><stop offset="0" stop-color="#6E5BFF" stop-opacity="0"/><stop offset=".5" stop-color="#4C8DFF" stop-opacity=".55"/><stop offset="1" stop-color="#00C2A8" stop-opacity=".6"/></linearGradient></defs><path class="flow-base" d="M-20 170 C 240 110, 420 250, 640 190 S 1020 120, 1220 210"/><path class="flow-run" d="M-20 170 C 240 110, 420 250, 640 190 S 1020 120, 1220 210"/><path class="flow-base" d="M-20 450 C 260 520, 480 380, 700 440 S 1040 520, 1220 420"/><path class="flow-run delay" d="M-20 450 C 260 520, 480 380, 700 440 S 1040 520, 1220 420"/></svg>
       <div class="container-x relative">
         <div class="text-center reveal"><span class="eyebrow">AI IN ACTION</span><h2 id="aiaTitle" class="section-h mt-4">讓 AI 從想像<span class="text-gradient">走向實踐</span></h2><p class="section-lead mx-auto mt-5">結合設計行銷經驗與企業 AI 導入實戰，探索 AI 如何改變工作流程、提升效率並創造價值。</p></div>
+        <!-- 2027年度計畫入口 -->
+        <a class="annual-plan-entry" href="annual-plan-2027.html" aria-label="閱讀2027訓練中心年度計畫：AI經營與產品改善系統"><span class="annual-entry-art" aria-hidden="true"><i></i><i></i><i></i></span><span class="annual-entry-copy"><small>2027 訓練中心年度計畫</small><strong>AI經營與產品改善系統</strong><span>從系統全貌、內銷管理循環，到市場與消費者洞察。</span></span><span class="annual-entry-go">閱讀年度計畫 <b aria-hidden="true">↗</b></span></a>
         <div class="grid md:grid-cols-3 gap-5 mt-14">
           <article class="aia-card card-hover reveal"><div class="flex items-start justify-between"><div class="aia-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div><span class="card-number">01 / IN ACTION</span></div><h3>企業 AI 導入與流程自動化</h3><p>從工作流程分析、AI Agent 到自動化應用，協助企業減少重複工作，讓 AI 真正融入日常營運。</p><a class="btn btn-soft" href="#solution-automation">探索 AI 應用 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></article>
           <article class="aia-card card-hover reveal"><div class="flex items-start justify-between"><div class="aia-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><span class="card-number">02 / IN ACTION</span></div><h3>AI 行銷創新與數據應用</h3><p>結合 28 年設計行銷經驗，運用 AI 加速內容創作、競品分析、電商營運與數據決策。</p><a class="btn btn-soft" href="#solution-marketing">探索行銷應用 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></article>
@@ -253,15 +323,105 @@
       </div>
     </section>
 
+    <section id="contact-form" class="section-pad" aria-labelledby="inquiryTitle">
+      <div class="container-x inquiry-layout">
+        <div class="inquiry-info">
+          <span class="eyebrow">LET’S TALK ABOUT YOUR NEXT PROJECT</span>
+          <h2 id="inquiryTitle" class="section-h mt-4">與我們取得聯繫<span class="text-gradient">，讓想法開始落地。</span></h2>
+          <p class="section-lead mt-5">企業內訓、資料科學專案或系統建置，歡迎分享您的需求，一起討論合作方向。</p>
+          <address class="inquiry-details">
+            <div><i class="fa-regular fa-envelope" aria-hidden="true"></i><div><span>聯絡信箱</span><a href="mailto:aa0932584846@gmail.com">aa0932584846@gmail.com</a></div></div>
+            <div><i class="fa-solid fa-phone" aria-hidden="true"></i><div><span>電話</span><a href="tel:+88647627131">(04)7627131</a></div></div>
+            <div><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><span>地址</span><p>彰化縣花壇鄉中山路2段771號</p></div></div>
+            <div><i class="fa-regular fa-building" aria-hidden="true"></i><div><span>統一編號</span><p>58033900</p></div></div>
+          </address>
+        </div>
+        <form id="inquiryForm" class="inquiry-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdj1ms7mCxPoVgcTH6xEy857tuS3TOwVrYfXBAUVD_sQdg5wA/formResponse" method="post" enctype="application/x-www-form-urlencoded" aria-labelledby="inquiryFormTitle">
+          <input type="hidden" id="inquiryContactTime" name="entry.1091995575">
+          <h3 id="inquiryFormTitle">聯絡我們</h3>
+          <p class="inquiry-intro">請填寫以下資訊，標示 * 為必填。</p>
+          <div class="inquiry-fields">
+            <div><label for="inquiryName">您的姓名／稱呼 <span aria-hidden="true">*</span></label><input id="inquiryName" name="entry.588998168" autocomplete="name" placeholder="請問我們該如何稱呼您？" required maxlength="100"></div>
+            <div><label for="inquiryEmail">聯絡電子信箱 <span aria-hidden="true">*</span></label><input id="inquiryEmail" name="entry.476214014" type="email" autocomplete="email" placeholder="name@example.com" required maxlength="254"></div>
+          </div>
+          <fieldset class="inquiry-needs"><legend>您的需求（可複選）<span aria-hidden="true">*</span></legend><div class="inquiry-options"><label><input type="checkbox" name="entry.1610329698" value="企業內訓">企業內訓</label><label><input type="checkbox" name="entry.1610329698" value="資料科學專案">資料科學專案</label><label><input type="checkbox" name="entry.1610329698" value="系統建置">系統建置</label></div><p id="needsError" class="inquiry-error" hidden>請至少選擇一項需求。</p></fieldset>
+          <div class="inquiry-field"><label for="inquiryDescription">需求簡介 <span aria-hidden="true">*</span></label><textarea id="inquiryDescription" name="entry.1646642689" rows="6" required placeholder="請描述您目前遇到的挑戰、預期目標、參與人數或專案範圍，以及預計時程。" aria-describedby="descriptionHint"></textarea><small id="descriptionHint">可詳細說明需求，方便後續交流。</small></div>
+          <div class="inquiry-fields"><div><label for="inquiryDay">適合聯絡的日期</label><select id="inquiryDay"><option>平日皆可</option><option>週一</option><option>週二</option><option>週三</option><option>週四</option><option>週五</option><option>週末</option><option>請先以電子郵件約定</option></select></div><div><label for="inquiryTime">方便聯絡的時段</label><select id="inquiryTime"><option>時間彈性</option><option>上午 09:00–12:00</option><option>下午 13:00–17:00</option><option>晚間 18:00–20:00</option><option>請先以電子郵件約定</option></select></div></div>
+          <div class="inquiry-field"><label for="inquiryNotes">其他時間備註（選填）</label><input id="inquiryNotes" placeholder="例如：週三下午方便，請先寄信聯絡" maxlength="300"></div>
+          <p class="inquiry-send-note" id="inquirySendNote">填寫後將提交至 Google 表單。若無法送出，可<a href="https://docs.google.com/forms/d/e/1FAIpQLSdj1ms7mCxPoVgcTH6xEy857tuS3TOwVrYfXBAUVD_sQdg5wA/viewform" target="_blank" rel="noopener noreferrer">另開 Google 表單填寫 ↗</a>。</p><noscript><p>請啟用 JavaScript，或使用上方 Google 表單連結完成填寫。</p></noscript>
+          <button class="btn btn-solid" type="submit" aria-describedby="inquirySendNote">送出需求 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i></button>
+          <p id="inquiryStatus" class="inquiry-status" role="status"></p>
+        </form>
+      </div>
+    </section>
     <section id="contact" class="section-pad" aria-labelledby="contactTitle"><div class="container-x reveal"><div class="cta-band"><div class="cta-content"><span class="eyebrow">LET'S CONNECT</span><h2 id="contactTitle" class="section-h mt-5">讓 AI 成為你的<br><span class="text-gradient">下一個成長動力。</span></h2><p class="section-lead mx-auto mt-6 mb-9">無論是企業 AI 導入、團隊培訓，還是工作流程優化，都歡迎一起探索適合你的 AI 應用方式。</p><a class="btn btn-primary" data-booking href="https://calendar.app.google/yrGdqPfziZRB4BLG9" target="_blank" rel="noopener noreferrer">預約 AI 應用交流 <span aria-hidden="true">↗</span><span class="btn-status">Status: Ready to Connect</span></a></div></div></div></section>
   </main>
-  <footer class="footer"><div class="container-x flex flex-col md:flex-row gap-7 justify-between md:items-center"><div><a href="#home" class="brand text-[24px]">Ivy Yen<span class="brand-dot">.</span></a><p class="footer-note mt-2">讓 AI 與數據，成為每個人的超能力。</p><p class="social-text mt-3">AI TRAINING · AI TRANSFORMATION · BUSINESS INNOVATION</p></div><a href="#home" class="btn btn-soft self-start">返回頂部 ↑</a></div><div class="container-x mt-10 pt-5 border-t border-slate-200"><p class="footer-note">© 2026 Ivy Yen. All Rights Reserved.</p></div></footer>
+  <dialog id="inquiryConfirmDialog" class="inquiry-confirm" aria-labelledby="inquiryConfirmTitle" aria-describedby="inquiryConfirmNote">
+    <div class="inquiry-confirm-icon" aria-hidden="true"><i class="fa-regular fa-paper-plane"></i></div>
+    <span class="eyebrow">THANK YOU FOR REACHING OUT</span>
+    <h2 id="inquiryConfirmTitle">需求已送出，<br>我們將盡快與您聯絡！</h2>
+    <p id="inquiryConfirmNote">提交請求已完成。由於 Google 跨來源限制，此頁無法確認收件結果，請勿重複提交；如需確認，請聯絡 aa0932584846@gmail.com。</p>
+    <form method="dialog"><button class="btn btn-solid" autofocus>返回網站</button></form>
+  </dialog>
+
+  <footer class="footer"><div class="container-x flex flex-col md:flex-row gap-7 justify-between md:items-center"><div><a href="#home" class="brand ivy-logo-link ivy-logo-footer" aria-label="Ivy Yen 回到首頁"><span class="ivy-logo-window"><img src="assets/brand/ivy-brand-board.png" alt="Ivy Yen｜AI × Design × Marketing" width="1448" height="1086" decoding="async"></span></a><p class="footer-note mt-2">讓 AI 與數據，成為每個人的超能力。</p><p class="social-text mt-3">AI TRAINING · AI TRANSFORMATION · BUSINESS INNOVATION</p></div><a href="#home" class="btn btn-soft self-start">返回頂部 ↑</a></div><div class="container-x mt-10 pt-5 border-t border-slate-200"><p class="footer-note">© 2026 Ivy Yen. All Rights Reserved.</p></div></footer>
   <script>
   'use strict';
+  const inquiryForm=document.getElementById('inquiryForm'),needsError=document.getElementById('needsError');
+  const inquiryStatus=document.getElementById('inquiryStatus'),inquirySubmit=inquiryForm.querySelector('[type="submit"]');
+  let inquirySending=false,inquirySubmitted=false;
+  function syncInquiryTime(){document.getElementById('inquiryContactTime').value=[document.getElementById('inquiryDay').value,document.getElementById('inquiryTime').value,document.getElementById('inquiryNotes').value.trim()].filter(Boolean).join('；')}
+  function inquiryEdited(){syncInquiryTime();if(inquirySending)return;if(inquirySubmitted){inquirySubmitted=false;inquirySubmit.disabled=false;inquirySubmit.textContent='送出需求';inquiryStatus.textContent='內容已修改，可再次送出。'}if(inquiryForm.querySelector('[name="entry.1610329698"]:checked')){needsError.hidden=true;inquiryForm.querySelector('.inquiry-needs').removeAttribute('aria-invalid')}}
+  inquiryForm.addEventListener('input',inquiryEdited);inquiryForm.addEventListener('change',inquiryEdited);syncInquiryTime();
+  inquiryForm.addEventListener('submit',async event=>{
+    event.preventDefault();if(inquirySending||inquirySubmitted)return;
+    if(!inquiryForm.reportValidity())return;
+    if(!inquiryForm.querySelector('[name="entry.1610329698"]:checked')){needsError.hidden=false;inquiryForm.querySelector('.inquiry-needs').setAttribute('aria-invalid','true');inquiryForm.querySelector('[name="entry.1610329698"]').focus();return}
+    if(!navigator.onLine){inquiryStatus.textContent='目前沒有網路連線，請連線後再試。您的內容已保留。';return}
+    syncInquiryTime();
+    // Verified against FB_PUBLIC_LOAD_DATA_: all five Google fields are text inputs.
+    const payload=new URLSearchParams(new FormData(inquiryForm));
+    payload.set('entry.1610329698',new FormData(inquiryForm).getAll('entry.1610329698').join('、'));
+    const controls=[...inquiryForm.querySelectorAll('input,select,textarea,button')];
+    const previousDisabled=controls.map(control=>control.disabled);
+    inquirySending=true;inquiryForm.setAttribute('aria-busy','true');controls.forEach(control=>control.disabled=true);
+    inquirySubmit.textContent='送出中…';inquiryStatus.textContent='正在提交需求，請稍候…';
+    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
+    try{
+      // no-cors permits the POST but returns an opaque response: never claim receipt.
+      await fetch(inquiryForm.action,{method:'POST',mode:'no-cors',credentials:'omit',body:payload,signal:controller.signal});
+      inquirySubmitted=true;
+      inquiryStatus.textContent='提交請求已完成，但此頁無法確認 Google 是否已收件。您的內容已保留；請勿重複送出。如需確認，請直接與我們聯絡。';
+      inquirySubmit.textContent='已提交（待確認收件）';
+      document.getElementById('inquiryConfirmDialog').showModal();
+    }catch(error){
+      inquiryStatus.textContent=error.name==='AbortError'?'連線逾時，無法確認是否已送達。內容已保留，請先確認收件狀態，或另開 Google 表單填寫。':'提交時發生連線問題，無法確認是否已送達。內容已保留，請檢查網路或另開 Google 表單填寫。';
+      inquirySubmit.textContent='重新送出需求';
+    }finally{clearTimeout(timeout);inquirySending=false;inquiryForm.removeAttribute('aria-busy');controls.forEach((control,index)=>control.disabled=previousDisabled[index]);inquirySubmit.disabled=inquirySubmitted;}
+  });
+
+  const photoDialog=document.getElementById('portfolioDialog'),photoImage=photoDialog.querySelector('img');
+  document.querySelectorAll('.portfolio-open').forEach(button=>button.addEventListener('click',()=>{photoImage.src=button.dataset.photo;photoImage.alt=button.dataset.caption;photoDialog.querySelector('figcaption').textContent=button.dataset.caption;photoDialog.showModal();document.body.classList.add('photo-open')}));
+  photoDialog.querySelector('.portfolio-close').addEventListener('click',()=>photoDialog.close());
+  photoDialog.addEventListener('click',event=>{if(event.target===photoDialog){const r=photoDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)photoDialog.close()}});
+  photoDialog.addEventListener('close',()=>{document.body.classList.remove('photo-open');photoImage.removeAttribute('src')});
+
   /* ===== 易維護設定：預約網址集中於此，會同步更新所有 data-booking 連結 ===== */
   const SITE_CONFIG = { bookingUrl:'https://calendar.app.google/yrGdqPfziZRB4BLG9', particleMaxDesktop:55, particleMaxMobile:23 };
   document.querySelectorAll('[data-booking]').forEach(a=>a.href=SITE_CONFIG.bookingUrl);
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Background video: mute before playback; only reveal frames once playing.
+  const videoHero=document.getElementById('home'),videoFrame=document.querySelector('.hero-video-frame'),videoToggle=document.getElementById('heroVideoToggle');
+  let heroPlayer=null,heroPlaying=false,heroUserPaused=false;
+  function sizeHeroVideo(){const r=videoHero.getBoundingClientRect(),w=Math.max(r.width,r.height*16/9),h=w*9/16;videoFrame.style.width=Math.ceil(w+4)+'px';videoFrame.style.height=Math.ceil(h+4)+'px'}
+  sizeHeroVideo();if('ResizeObserver' in window)new ResizeObserver(sizeHeroVideo).observe(videoHero);else addEventListener('resize',sizeHeroVideo);
+  function setVideoControl(playing){heroPlaying=playing;videoToggle.textContent=playing?'暫停背景影片 Ⅱ':'播放背景影片 ▶';videoToggle.setAttribute('aria-label',playing?'暫停背景影片':'播放背景影片')}
+  function createHeroPlayer(){if(heroPlayer||!window.YT||!YT.Player)return;heroPlayer=new YT.Player('heroVideoPlayer',{videoId:'cAaC26Gb5Nc',width:'100%',height:'100%',playerVars:{autoplay:prefersReducedMotion.matches?0:1,mute:1,playsinline:1,loop:1,playlist:'cAaC26Gb5Nc',controls:0,disablekb:1,fs:0,rel:0,...(location.protocol==='http:'||location.protocol==='https:'?{origin:location.origin}:{})},events:{onReady:event=>{const iframe=event.target.getIframe();iframe.setAttribute('title','首頁背景影片');iframe.setAttribute('tabindex','-1');iframe.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');event.target.mute();if(!prefersReducedMotion.matches&&!heroUserPaused)event.target.playVideo()},onStateChange:event=>{const playing=event.data===YT.PlayerState.PLAYING;if(playing)videoHero.classList.add('video-playing');setVideoControl(playing);if(event.data===YT.PlayerState.ENDED&&!heroUserPaused){event.target.seekTo(0);event.target.playVideo()}},onError:()=>{videoHero.classList.remove('video-playing');setVideoControl(false)}}})}
+  window.onYouTubeIframeAPIReady=createHeroPlayer;
+  const ytScript=document.createElement('script');ytScript.src='https://www.youtube.com/iframe_api';ytScript.async=true;document.head.appendChild(ytScript);
+  videoToggle.addEventListener('click',()=>{if(!heroPlayer||typeof heroPlayer.playVideo!=='function'){createHeroPlayer();return}if(heroPlaying){heroUserPaused=true;heroPlayer.pauseVideo()}else{heroUserPaused=false;heroPlayer.mute();heroPlayer.playVideo()}});
+  document.addEventListener('visibilitychange',()=>{if(!heroPlayer||typeof heroPlayer.pauseVideo!=='function')return;if(document.hidden)heroPlayer.pauseVideo();else if(!heroUserPaused&&!prefersReducedMotion.matches){heroPlayer.mute();heroPlayer.playVideo()}});
+
   // Sticky navigation
   const nav=document.getElementById('siteNav');
   const updateNav=()=>nav.classList.toggle('scrolled',window.scrollY>18);
